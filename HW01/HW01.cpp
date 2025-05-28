@@ -28,7 +28,8 @@ int main() {              // 메인 함수 (프로그램 시작 지점)
 
 	return 0;                // 프로그램 정상 종료
 
-	cout << "Hello, world!" << endl;
+	cout << "Hello from main!" << endl;
+
 }
 
 
