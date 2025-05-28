@@ -27,6 +27,8 @@ int main() {              // 메인 함수 (프로그램 시작 지점)
 	cout << "평균: " << average << endl;  // 평균 출력
 
 	return 0;                // 프로그램 정상 종료
+
+	cout << "Hello, world!" << endl;
 }
 
 
