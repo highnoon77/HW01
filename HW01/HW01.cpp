@@ -1,39 +1,35 @@
 ﻿#include <iostream>
 using namespace std;
 
+// 5. 배열 원소들의 합계를 반환하는 함수
+int sum(int arr[5]) {
+	int s = 0;
+	for (int i = 0; i < 5; i++) {
+		s += arr[i];
+	}
+	return s;
+}
+
+// 6. 배열 원소들의 평균을 반환하는 함수
+double avg(int arr[5]) {
+	return sum(arr) / 5.0;
+}
+
 int main() {
-	int n;
+	// 1~2. 사용자로부터 5개의 숫자를 입력받아 배열에 저장
+	int nums[5];
+	cout << "숫자 5개를 입력하세요: ";
+	for (int i = 0; i < 5; i++) {
+		cin >> nums[i];
+	}
 
-	cout << "크기를 입력하세요(양의 정수): ";
-	cin >> n;
+	// 3~4. 합계와 평균 계산 및 출력
+	int total = sum(nums);
+	double average = avg(nums);
 
-	while (n <= 0) {
-		cout << "양의 정수를 입력하세요: ";
-		cin >> n;
-	}
-	// 상단
-	for (int i = 1; i <= n; ++i) { // 현재 줄 번호
-		// 공백
-		for (int j = 1; j <= n - i; ++j) {
-			cout << " ";
-		}
-		// 별
-		for (int k = 1; k <= 2 * i - 1; ++k) {
-			cout << "*";
-		}
-		cout << endl;
-	}
-	// 하단
-	for (int i = n - 1; i >= 1; --i) {
-		// 공백 출력
-		for (int j = 1; j <= n - i; ++j) {
-			cout << " ";
-		}
-		// 별 출력
-		for (int k = 1; k <= 2 * i - 1; ++k) {
-			cout << "*";
-		}
-		cout << endl; // 줄 바꿈
-	}
+	// 7. 함수 호출 결과 출력
+	cout << "합계: " << total << endl;
+	cout << "평균: " << average << endl;
+
 	return 0;
 }
